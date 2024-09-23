@@ -1,0 +1,88 @@
+:root {
+    -–main-white: #f0f0f0;
+    -–main-red: #be3144;
+    -–main-blue: #45567d;
+    -–main-gray: #303841;
+}
+
+
+body{
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Header */
+
+header{
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.header_container{
+    width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header_logo_name{
+    font-size: xx-large;
+    font-weight: 700;
+}
+#header_listbox{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header_item{
+    text-decoration: none;
+    color: var(--main-gray);
+    
+    width: 64px;
+    padding: 20px;
+
+    font-size: large;
+    font-weight: 400;
+
+}
+.header_item:hover{
+    text-decoration: underline;
+    color: var(--main-red);
+    
+    
+}
+
+
+/* Main */
+
+
+main{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.main_section{
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;   
+}
+
+.main_section_container{
+    display: flex;
+    align-items: center;
+}
+.main_section_container > * {
+    padding: 20px;
+}
