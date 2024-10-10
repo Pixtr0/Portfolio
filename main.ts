@@ -90,7 +90,6 @@ function animate() {
 
   render()
 
-  stats.update()
 }
 
 animate()
