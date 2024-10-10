@@ -1,6 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
-// import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import Stats from 'three/addons/libs/stats.module.js'
 import { GUI } from 'dat.gui'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -17,10 +17,13 @@ const ambientLight = new THREE.AmbientLight()
 scene.add(ambientLight)
 
 
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 camera.position.z = 5
 camera.position.y = 6
 camera.rotation.x = -(Math.PI * 2)/16
+
+
 
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
@@ -31,6 +34,10 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix()
   renderer.setSize(window.innerWidth, window.innerHeight)
 })
+
+const controls = new OrbitControls(camera, renderer.domElement)
+controls.enableDamping = true
+controls.target.set(0, 1, 0)
 
 // const geometry = new THREE.BoxGeometry()
 // const material = new THREE.MeshNormalMaterial({ wireframe: false })
@@ -53,11 +60,11 @@ cameraFolder.add(camRot, 'x', 0, 360)
 
 cameraFolder.open()
 
-let cedric
+// let cedric
 const loader = new GLTFLoader()
-loader.load('./models/Cedric/cedricModel.gltf', (gltf) =>{
+loader.load('./models/Cedric/cedricModel.gltf', (gltf) => {
   gltf.scene.traverse(c => c.castShadow = true)
-  cedric = gltf.scene
+  // cedric = gltf.scene
   scene.add(gltf.scene)
 })
 
@@ -79,7 +86,7 @@ function animate() {
   deltaTime = clock.getDelta()
 //   cube.rotation.x += 0.01
 //   cube.rotation.y += 0.01
-  cedric.rotation.y += deltaTime
+  // cedric.rotation.y += 0.01
 
   render()
 
