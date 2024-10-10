@@ -45,8 +45,8 @@ window.addEventListener('resize', () => {
 // const cube = new THREE.Mesh(geometry, material)
 // scene.add(cube)
 
-const stats = new Stats()
-document.body.appendChild(stats.dom)
+// const stats = new Stats()
+// document.body.appendChild(stats.dom)
 
 // const gui = new GUI()
 
