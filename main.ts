@@ -48,17 +48,17 @@ window.addEventListener('resize', () => {
 const stats = new Stats()
 document.body.appendChild(stats.dom)
 
-const gui = new GUI()
+// const gui = new GUI()
 
-const cameraFolder = gui.addFolder('Camera')
-cameraFolder.add(camera.position, 'z', -10, 10)
-cameraFolder.add(camera.position, 'y', -10, 10)
+// const cameraFolder = gui.addFolder('Camera')
+// cameraFolder.add(camera.position, 'z', -10, 10)
+// cameraFolder.add(camera.position, 'y', -10, 10)
 
-let camRot = new THREE.Vector3(0,0,0)
-cameraFolder.add(camRot, 'x', 0, 360)
+// let camRot = new THREE.Vector3(0,0,0)
+// cameraFolder.add(camRot, 'x', 0, 360)
 
 
-cameraFolder.open()
+// cameraFolder.open()
 
 let cedric
 const loader = new GLTFLoader()
