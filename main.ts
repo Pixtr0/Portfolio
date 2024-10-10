@@ -60,11 +60,11 @@ window.addEventListener('resize', () => {
 
 // cameraFolder.open()
 
-let cedric
+var cedricModel
 const loader = new GLTFLoader()
 loader.load('./models/Cedric/cedricModel.gltf', (gltf) => {
   gltf.scene.traverse(c => c.castShadow = true)
-  cedric = gltf.scene
+  cedricModel = gltf.scene
   scene.add(gltf.scene)
 })
 
@@ -73,8 +73,6 @@ loader.load('./models/Cedric/cedricModel.gltf', (gltf) => {
 
 
 // frame independant type shi
-const clock = new THREE.Clock()
-let deltaTime
 function render(){
   renderer.render(scene, camera)
 }
@@ -82,11 +80,9 @@ function render(){
 
 function animate() {
   requestAnimationFrame(animate)
-
-  deltaTime = clock.getDelta()
-//   cube.rotation.x += 0.01
-//   cube.rotation.y += 0.01
-  cedric.rotation.y += 0.01
+  if(cedricModel){
+    cedricModel.rotation.y += 0.01
+  }
 
   render()
 
