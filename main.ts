@@ -61,7 +61,7 @@ window.addEventListener('resize', () => {
 
 var cedricModel
 const loader = new GLTFLoader()
-loader.load('https://github.com/Pixtr0/Portfolio/models/Cedric/cedricModel.gltf', (gltf) => {
+loader.load('/models/Cedric/cedricModel.gltf', (gltf) => {
   gltf.scene.traverse(c => c.castShadow = true)
   cedricModel = gltf.scene
   scene.add(gltf.scene)
