@@ -5,7 +5,6 @@ import Stats from 'three/addons/libs/stats.module.js'
 import { GUI } from 'dat.gui'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
-
 const scene = new THREE.Scene()
 //scene.background = new THREE.TextureLoader().load('https://sbcode.net/img/grid.png')
 
@@ -62,7 +61,7 @@ window.addEventListener('resize', () => {
 
 var cedricModel
 const loader = new GLTFLoader()
-loader.load('./models/Cedric/cedricModel.gltf', (gltf) => {
+loader.load('https://github.com/Pixtr0/Portfolio/models/Cedric/cedricModel.gltf', (gltf) => {
   gltf.scene.traverse(c => c.castShadow = true)
   cedricModel = gltf.scene
   scene.add(gltf.scene)
