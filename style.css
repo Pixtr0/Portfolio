@@ -17,3 +17,8 @@ main{
   width: 100vw;
   height: 100vh;
 }
+
+.tile{
+  border-radius: 20px;
+  background-color: #da8de9;
+}
