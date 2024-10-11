@@ -8,9 +8,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 const scene = new THREE.Scene()
 //scene.background = new THREE.TextureLoader().load('https://sbcode.net/img/grid.png')
 
-const light = new THREE.PointLight(0xffffff, 50)
-light.position.set(0.8, 1.4, 1.0)
-scene.add(light)
+// const light = new THREE.PointLight(0xffffff, 50)
+// light.position.set(0.8, 1.4, 1.0)
+// scene.add(light)
 
 const ambientLight = new THREE.AmbientLight()
 scene.add(ambientLight)
@@ -48,6 +48,11 @@ window.addEventListener('resize', () => {
 // document.body.appendChild(stats.dom)
 
 // const gui = new GUI()
+
+// const lightFolder = gui.addFolder('light')
+// lightFolder.add(light.position, 'x', -10, 10)
+// lightFolder.add(light.position, 'y', -10, 10)
+// lightFolder.add(light.position, 'z', -10, 10)
 
 // const cameraFolder = gui.addFolder('Camera')
 // cameraFolder.add(camera.position, 'z', -10, 10)
